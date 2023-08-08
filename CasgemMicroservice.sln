@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{94E1933F-425E-4041-9986-60E636A9E431}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{CE7D1F80-5E03-4583-ADC0-B068FF7155F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{2B249AA7-F0C3-4F81-B8D7-5C9A71E987CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2BB6B51B-A804-4219-9E27-F4287482DC2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{7652DE5C-0BC2-4EBD-9E13-4917FAA04B30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{1876E5FC-E345-48F8-9FDA-3DDF2B4B7904}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{BE143E11-BFE7-4FE5-B402-17541F8E660A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{F5C1A37E-8726-4373-AF41-EAF582B0454C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cargo", "Cargo", "{7F9983DA-EBD8-4A97-BC80-9674C2110F5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{3CC5F122-B554-4539-8377-8BB68627608E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{AFF1D983-05B1-40D4-8896-E1C6F9423CA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", "{76DD5A40-5A73-466D-8BB1-0DA0FD4E69F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{4BB7113F-E008-47BE-AA51-BA2DC52127EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasgemMicroservice.Shared", "Shared\CasgemMicroservice.Shared\CasgemMicroservice.Shared.csproj", "{1642D959-72B3-416E-9451-EAEBD0D0D1A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasgemMicroservice.Services.Catalog", "Services\Catalog\CasgemMicroservice.Services.Catalog\CasgemMicroservice.Services.Catalog.csproj", "{1EC8DEC1-03C6-4124-9368-ED9C21CAE233}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1642D959-72B3-416E-9451-EAEBD0D0D1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1642D959-72B3-416E-9451-EAEBD0D0D1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1642D959-72B3-416E-9451-EAEBD0D0D1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1642D959-72B3-416E-9451-EAEBD0D0D1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC8DEC1-03C6-4124-9368-ED9C21CAE233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC8DEC1-03C6-4124-9368-ED9C21CAE233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC8DEC1-03C6-4124-9368-ED9C21CAE233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC8DEC1-03C6-4124-9368-ED9C21CAE233}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE143E11-BFE7-4FE5-B402-17541F8E660A} = {7652DE5C-0BC2-4EBD-9E13-4917FAA04B30}
+		{F5C1A37E-8726-4373-AF41-EAF582B0454C} = {7652DE5C-0BC2-4EBD-9E13-4917FAA04B30}
+		{7F9983DA-EBD8-4A97-BC80-9674C2110F5D} = {7652DE5C-0BC2-4EBD-9E13-4917FAA04B30}
+		{3CC5F122-B554-4539-8377-8BB68627608E} = {7652DE5C-0BC2-4EBD-9E13-4917FAA04B30}
+		{AFF1D983-05B1-40D4-8896-E1C6F9423CA4} = {7652DE5C-0BC2-4EBD-9E13-4917FAA04B30}
+		{76DD5A40-5A73-466D-8BB1-0DA0FD4E69F6} = {7652DE5C-0BC2-4EBD-9E13-4917FAA04B30}
+		{4BB7113F-E008-47BE-AA51-BA2DC52127EE} = {7652DE5C-0BC2-4EBD-9E13-4917FAA04B30}
+		{1642D959-72B3-416E-9451-EAEBD0D0D1A8} = {2BB6B51B-A804-4219-9E27-F4287482DC2E}
+		{1EC8DEC1-03C6-4124-9368-ED9C21CAE233} = {F5C1A37E-8726-4373-AF41-EAF582B0454C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02D09B00-3115-4E62-962D-2FCE398FECF0}
+	EndGlobalSection
+EndGlobal
