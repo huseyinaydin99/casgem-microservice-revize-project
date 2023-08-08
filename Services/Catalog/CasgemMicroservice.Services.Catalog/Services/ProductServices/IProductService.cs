@@ -7,10 +7,10 @@ namespace CasgemMicroservice.Services.Catalog.Services.ProductServices
 {
     public interface IProductService
     {
-        Task<Response<List<ResultCategoryDTO>>> GetAllProductAsync();
-        Task<Response<ResultCategoryDTO>> GetByIdProductAsync(int id);
+        Task<Response<List<ResultProductDTO>>> GetAllProductAsync();
+        Task<Response<ResultProductDTO>> GetByIdProductAsync(string id);
         Task<Response<NoContent>> CreateProductAsync(CreateProductDTO createProductDTO);
         Task<Response<NoContent>> UpdateProductAsync(UpdateProductDTO updateProductDTO);
-        Task<Response<NoContent>> DeleteProductAsync(int productId);
+        Task<Response<NoContent>> DeleteProductAsync(string productId);
     }
 }
