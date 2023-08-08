@@ -1,7 +1,8 @@
 using CasgemMicroservice.Catalog.Settings.Abstracts;
 using CasgemMicroservice.Services.Catalog.Services.CategoryServices;
 using CasgemMicroservice.Services.Catalog.Services.ProductServices;
-using CasgemMicroservice.Services.Catalog.Setting.Abstracts;
+using CasgemMicroservice.Services.Catalog.Settings.Abstracts;
+using Microsoft.Extensions.Options;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +14,7 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
 builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 {
-    return sp.GetRequiredService<DatabaseSettings>();
+    return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
 });
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

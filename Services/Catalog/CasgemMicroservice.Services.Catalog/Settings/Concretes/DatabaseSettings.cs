@@ -1,6 +1,6 @@
 ﻿using CasgemMicroservice.Catalog.Settings.Abstracts;
 
-namespace CasgemMicroservice.Services.Catalog.Setting.Abstracts
+namespace CasgemMicroservice.Services.Catalog.Settings.Abstracts
 {
     public class DatabaseSettings : IDatabaseSettings
     {

@@ -1,0 +1,3 @@
+PS C:\Users\Huseyin_Aydin> dotnet new -i identityserver4.template
+PS C:\Users\Huseyin_Aydin> cd C:\Users\Huseyin_Aydin\source\Workspaces\CasgemMicroservice\IdentityServer
+PS C:\Users\Huseyin_Aydin\source\Workspaces\CasgemMicroservice\IdentityServer> dotnet new is4aspid --name CasgemMicroservice.IdentityServer
