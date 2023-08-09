@@ -2,7 +2,11 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
+using CasgemMicroservice.IdentityServer.Data;
+using CasgemMicroservice.IdentityServer.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -34,7 +38,6 @@ namespace CasgemMicroservice.IdentityServer
                 //    flushToDiskInterval: TimeSpan.FromSeconds(1))
                 .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}", theme: AnsiConsoleTheme.Code)
                 .CreateLogger();
-
             try
             {
                 var seed = args.Contains("/seed");
@@ -42,9 +45,18 @@ namespace CasgemMicroservice.IdentityServer
                 {
                     args = args.Except(new[] { "/seed" }).ToArray();
                 }
-
                 var host = CreateHostBuilder(args).Build();
-
+                using (var scope = host.Services.CreateScope())
+                {
+                    var serviceProvider = scope.ServiceProvider;
+                    var applicationDbContent = serviceProvider.GetRequiredService<ApplicationDbContext>();
+                    applicationDbContent.Database.Migrate();
+                    var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+                    if (!userManager.Users.Any())//kullanıcı yoksa yenisini ekler.
+                    {
+                        userManager.CreateAsync(new ApplicationUser { UserName = "huso99", Email = "abc@abc.com", NameSurname="Hüseyin Aydın", City = "Niğde" }, "123456Aa*").Wait();
+                    }
+                }
                 if (seed)
                 {
                     Log.Information("Seeding database...");
