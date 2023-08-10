@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-
 using IdentityServer4;
 using IdentityServer4.Models;
 using System.Collections.Generic;
@@ -16,20 +15,24 @@ namespace CasgemMicroservice.IdentityServer
             {
                 Scopes = {"catalog_fullpermission" }
             },
+            new ApiResource("resource_photostock")
+            {
+                Scopes = {"photostock_fullpermission"}
+            },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
-        public static IEnumerable<IdentityResource> IdentityResources =>
-                   new IdentityResource[]
-                   {
-                new IdentityResources.OpenId(),
-                new IdentityResources.Profile(),
-                new IdentityResources.Email()
-                   };
+        public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
+        {
+            new IdentityResources.OpenId(),
+            new IdentityResources.Profile(),
+            new IdentityResources.Email()
+        };
 
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
                 new ApiScope("catalog_fullpermission", "Ürün listesi için tam erişim."),
+                new ApiScope("photostock_fullpermission", "Fotoğraf işlemleri için tam erişim."),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
             };
 
@@ -37,19 +40,20 @@ namespace CasgemMicroservice.IdentityServer
             new Client[]
             {
                 // 1. client yetkisiz erişim sadece okuma. Insert update delete yapamaz.
-                //1. client(kullanıcı) sadece ürünleri ve kategorileri görebilir.
+                // 1. client(kullanıcı) sadece ürünleri ve kategorileri görebilir.
                 new Client
                 {
                     ClientId = "Casgem1Client",
                     ClientName = "Casgem Client Name",
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = 
-                    { 
+                    {
                         new Secret("secret".Sha256()) 
                     },
                     AllowedScopes = 
                     { 
                         "catalog_fullpermission",
+                        "photostock_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName 
                     }
                 },
