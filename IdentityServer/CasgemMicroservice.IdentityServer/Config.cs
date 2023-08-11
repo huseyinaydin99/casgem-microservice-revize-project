@@ -19,6 +19,14 @@ namespace CasgemMicroservice.IdentityServer
             {
                 Scopes = {"photostock_fullpermission"}
             },
+            new ApiResource("resource_basket")
+            {
+                Scopes = {"basket_fullpermission"}
+            },
+            new ApiResource("resource_discount")
+            {
+                Scopes = { "discount_fullpermission" }
+            },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
@@ -33,6 +41,8 @@ namespace CasgemMicroservice.IdentityServer
             {
                 new ApiScope("catalog_fullpermission", "Ürün listesi için tam erişim."),
                 new ApiScope("photostock_fullpermission", "Fotoğraf işlemleri için tam erişim."),
+                new ApiScope("basket_fullpermission", "Sepet işlemleri için tam erişim."),
+                new ApiScope("discount_fullpermission", "İndirim kuponu işlemleri için tam erişim."),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
             };
 
@@ -70,6 +80,8 @@ namespace CasgemMicroservice.IdentityServer
                     {
                         "catalog_fullpermission",
                         "basket_fullpermission",
+                        "photostock_fullpermission",
+                        "discount_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
