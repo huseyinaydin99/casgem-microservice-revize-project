@@ -13,7 +13,7 @@ namespace CasgemMicroservice.Services.Order.Core.Domain.Entities
         public string ProductName { get; set; }
         public decimal ProductPrice { get; set; }
         public int ProductAmount { get; set; }
-        public int OrderId { get; set; }
-        public Order Order { get; set; }
+        public int OrderingId { get; set; }
+        public Ordering Ordering { get; set; }
     }
 }

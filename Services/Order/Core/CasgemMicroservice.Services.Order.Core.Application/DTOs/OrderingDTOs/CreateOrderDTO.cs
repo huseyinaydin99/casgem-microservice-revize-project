@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CasgemMicroservice.Services.Order.Core.Application.DTOs.OrderDTOs
+namespace CasgemMicroservice.Services.Order.Core.Application.DTOs.OrderingDTOs
 {
-    public class UpdateOrderDTO
+    public class CreateOrderDTO
     {
-        public int OrderId { get; set; }
         public string UserId { get; set; }
         public decimal TotalPrice { get; set; }
         public DateTime OrderDate { get; set; }
-        public List<OrderDetail> OrderDetails { get; set; }
     }
 }
