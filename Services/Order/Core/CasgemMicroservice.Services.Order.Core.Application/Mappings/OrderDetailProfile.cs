@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using CasgemMicroservice.Services.Order.Core.Application.DTOs.OrderDetailsDTOs;
-using CasgemMicroservice.Services.Order.Core.Application.DTOs.OrderDTOs;
+using CasgemMicroservice.Services.Order.Core.Application.DTOs.OrderingDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

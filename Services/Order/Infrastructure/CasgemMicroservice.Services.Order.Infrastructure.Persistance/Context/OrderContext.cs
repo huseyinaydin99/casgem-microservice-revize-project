@@ -16,7 +16,7 @@ namespace CasgemMicroservice.Services.Order.Infrastructure.Persistance.Context
         }
 
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<Core.Domain.Entities.Ordering> Orders { get; set; }
+        public DbSet<Ordering> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
     }
 }
