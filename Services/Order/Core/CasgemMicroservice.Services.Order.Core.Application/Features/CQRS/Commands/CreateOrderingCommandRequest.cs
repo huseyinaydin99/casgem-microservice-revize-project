@@ -1,13 +1,13 @@
-﻿using CasgemMicroservice.Services.Order.Core.Domain.Entities;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CasgemMicroservice.Services.Order.Core.Application.DTOs.OrderingDTOs
+namespace CasgemMicroservice.Services.Order.Core.Application.Features.CQRS.Commands
 {
-    public class CreateOrderDTO
+    public class CreateOrderingCommandRequest : IRequest
     {
         public string UserId { get; set; }
         public decimal TotalPrice { get; set; }
