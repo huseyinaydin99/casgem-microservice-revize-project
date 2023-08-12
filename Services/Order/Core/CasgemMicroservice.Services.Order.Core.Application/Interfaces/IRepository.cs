@@ -8,7 +8,7 @@ namespace CasgemMicroservice.Services.Order.Core.Application.Interfaces
 {
     public interface IRepository<T> where T : class, new()
     {
-        Task<T> GetById(int id);
+        Task<T> GetByIdAsync(int id);
         Task<List<T>> GetAllAsync();
         Task<T> CreateAsync(T t);
         Task<T> UpdateAsync(T t);
