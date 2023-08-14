@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CasgemMicroservice.Serivces.Cargo.EntityLayer\CasgemMicroservice.Serivces.Cargo.EntityLayer.csproj" />
+  </ItemGroup>
+
 </Project>
