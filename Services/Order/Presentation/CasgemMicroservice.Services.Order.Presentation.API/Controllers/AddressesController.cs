@@ -21,7 +21,7 @@ namespace CasgemMicroservice.Services.Order.Presentation.API.Controllers
         [HttpGet]
         public async Task<IActionResult> AddressList()
         {
-            var values = _mediator.Send(new GetAllAddressQueryRequest());
+            var values = await _mediator.Send(new GetAllAddressQueryRequest());
             return Ok(values);
         }
 
