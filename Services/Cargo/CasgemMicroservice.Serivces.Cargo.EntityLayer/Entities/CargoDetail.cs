@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CasgemMicroservice.Serivces.Cargo.EntityLayer.Entities
 {
-    public class CargoState : IEntity
+    public class CargoDetail : IEntity
     {
+        public int CargoDetailId { get; set; }
+        public int OrderingId { get; set; }
         public int CargoStateId { get; set; }
-        public string Description { get; set; }
-        public List<CargoDetail> CargoDetails { get; set; }
+        public CargoState CargoState { get; set; }
     }
 }
