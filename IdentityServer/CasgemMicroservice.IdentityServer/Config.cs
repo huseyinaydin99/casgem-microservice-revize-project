@@ -27,6 +27,10 @@ namespace CasgemMicroservice.IdentityServer
             {
                 Scopes = { "discount_fullpermission" }
             },
+            new ApiResource("resource_order")
+            {
+                Scopes = { "order_fullpermission" }
+            },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
@@ -39,10 +43,11 @@ namespace CasgemMicroservice.IdentityServer
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
-                new ApiScope("catalog_fullpermission", "Ürün listesi için tam erişim."),
-                new ApiScope("photostock_fullpermission", "Fotoğraf işlemleri için tam erişim."),
-                new ApiScope("basket_fullpermission", "Sepet işlemleri için tam erişim."),
-                new ApiScope("discount_fullpermission", "İndirim kuponu işlemleri için tam erişim."),
+                new ApiScope("catalog_fullpermission", "Ürün listesi için tam erişim / yetki."),
+                new ApiScope("photostock_fullpermission", "Fotoğraf işlemleri için tam erişim / yetki."),
+                new ApiScope("basket_fullpermission", "Sepet işlemleri için tam erişim / yetki."),
+                new ApiScope("discount_fullpermission", "İndirim kuponu işlemleri için tam erişim / yetki."),
+                new ApiScope("order_fullpermission", "Sipariş işlemleri için tam erişim / yetki."),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
             };
 
@@ -64,6 +69,7 @@ namespace CasgemMicroservice.IdentityServer
                     { 
                         "catalog_fullpermission",
                         "photostock_fullpermission",
+                        "order_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName 
                     }
                 },
@@ -82,6 +88,7 @@ namespace CasgemMicroservice.IdentityServer
                         "basket_fullpermission",
                         "photostock_fullpermission",
                         "discount_fullpermission",
+                        "order_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
