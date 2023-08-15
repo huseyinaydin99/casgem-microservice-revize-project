@@ -39,6 +39,10 @@ namespace CasgemMicroservice.IdentityServer
             {
                 Scopes = { "payment_fullpermission" }
             },
+            new ApiResource("resource_gateway")
+            {
+                Scopes = { "gateway_fullpermission" }
+            },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
@@ -58,6 +62,7 @@ namespace CasgemMicroservice.IdentityServer
                 new ApiScope("order_fullpermission", "Sipariş işlemleri için tam erişim / yetki."),
                 new ApiScope("cargo_fullpermission", "Kargo işlemleri için tam erişim / yetki."),
                 new ApiScope("payment_fullpermission", "Ödeme işlemleri için tam erişim / yetki."),
+                new ApiScope("gateway_fullpermission", "Güvenlik(Gateway API) işlemleri için tam erişim / yetki."),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
             };
 
@@ -79,6 +84,7 @@ namespace CasgemMicroservice.IdentityServer
                     { 
                         "catalog_fullpermission",
                         "photostock_fullpermission",
+                        "gateway_fullpermission",
                         //"order_fullpermission",
                         //"payment_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName 
@@ -102,6 +108,7 @@ namespace CasgemMicroservice.IdentityServer
                         "order_fullpermission",
                         "cargo_fullpermission",
                         "payment_fullpermission",
+                        "gateway_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
