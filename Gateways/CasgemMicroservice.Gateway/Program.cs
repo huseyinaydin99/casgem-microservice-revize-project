@@ -4,7 +4,7 @@ using Ocelot.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("Configuration.Development.json", optional: false, reloadOnChange: true);
 builder.Services.AddOcelot(builder.Configuration);
-builder.Services.AddAuthentication().AddJwtBearer("GatewayAuthenticationScheme", options =>
+builder.Services.AddAuthentication().AddJwtBearer("GatewayAuthenticationSchema", options =>
 {
     options.Authority = builder.Configuration["IdentityServerUrl"];
     options.Audience = "resource_gateway";

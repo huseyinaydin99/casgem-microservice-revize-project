@@ -48,7 +48,7 @@
       "UpstreamSchema": "http",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "GatewayAuthenticationSchema",
-        "AllowedScopes": [ "catalog_fullpermission" ]
+        "AllowedScopes": [ "basket_fullpermission" ]
       }
     },
     {
