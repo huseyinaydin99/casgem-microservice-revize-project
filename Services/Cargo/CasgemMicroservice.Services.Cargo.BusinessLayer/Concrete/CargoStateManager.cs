@@ -1,5 +1,6 @@
 ﻿using CasgemMicroservice.Serivces.Cargo.EntityLayer.Entities;
 using CasgemMicroservice.Services.Cargo.BusinessLayer.Abstract;
+using CasgemMicroservice.Services.Cargo.DataAccessLayer.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,36 +11,36 @@ namespace CasgemMicroservice.Services.Cargo.BusinessLayer.Concrete
 {
     public class CargoStateManager : ICargoStateService
     {
-        private readonly ICargoStateService _cargoStateService;
+        private readonly ICargoStateDal _cargoStateDal;
 
-        public CargoStateManager(ICargoStateService cargoStateService)
+        public CargoStateManager(ICargoStateDal cargoStateService)
         {
-            _cargoStateService = cargoStateService;
+            _cargoStateDal = cargoStateService;
         }
 
         public void Delete(CargoState t)
         {
-            _cargoStateService.Delete(t);
+            _cargoStateDal.Delete(t);
         }
 
         public List<CargoState> GetAll()
         {
-            return _cargoStateService.GetAll();
+            return _cargoStateDal.GetAll();
         }
 
         public CargoState GetById(int id)
         {
-            return _cargoStateService.GetById(id);
+            return _cargoStateDal.GetById(id);
         }
 
         public void Insert(CargoState t)
         {
-            _cargoStateService.Insert(t);
+            _cargoStateDal.Insert(t);
         }
 
         public void Update(CargoState t)
         {
-            _cargoStateService.Update(t);
+            _cargoStateDal.Update(t);
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace CasgemMicroservice.Services.Cargo.DataAccessLayer.EntityFramework
 {
-    public class EfCargoDetail : GenericRepository<CargoDetail>, ICargoDetailDal
+    public class EfCargoDetailDal : GenericRepository<CargoDetail>, ICargoDetailDal
     {
-        public EfCargoDetail(CargoContext context) : base(context)
+        public EfCargoDetailDal(CargoContext context) : base(context)
         {
 
         }

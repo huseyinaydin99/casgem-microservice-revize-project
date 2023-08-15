@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CasgemMicroservice.Serivces.Cargo.EntityLayer\CasgemMicroservice.Serivces.Cargo.EntityLayer.csproj" />
+    <ProjectReference Include="..\CasgemMicroservice.Services.Cargo.DataAccessLayer\CasgemMicroservice.Services.Cargo.DataAccessLayer.csproj" />
   </ItemGroup>
 
 </Project>

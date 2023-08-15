@@ -31,6 +31,14 @@ namespace CasgemMicroservice.IdentityServer
             {
                 Scopes = { "order_fullpermission" }
             },
+            new ApiResource("resource_cargo")
+            {
+                Scopes = { "cargo_fullpermission" }
+            },
+            new ApiResource("resource_payment")
+            {
+                Scopes = { "payment_fullpermission" }
+            },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
@@ -48,6 +56,8 @@ namespace CasgemMicroservice.IdentityServer
                 new ApiScope("basket_fullpermission", "Sepet işlemleri için tam erişim / yetki."),
                 new ApiScope("discount_fullpermission", "İndirim kuponu işlemleri için tam erişim / yetki."),
                 new ApiScope("order_fullpermission", "Sipariş işlemleri için tam erişim / yetki."),
+                new ApiScope("cargo_fullpermission", "Kargo işlemleri için tam erişim / yetki."),
+                new ApiScope("payment_fullpermission", "Ödeme işlemleri için tam erişim / yetki."),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
             };
 
@@ -69,7 +79,8 @@ namespace CasgemMicroservice.IdentityServer
                     { 
                         "catalog_fullpermission",
                         "photostock_fullpermission",
-                        "order_fullpermission",
+                        //"order_fullpermission",
+                        //"payment_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName 
                     }
                 },
@@ -89,6 +100,8 @@ namespace CasgemMicroservice.IdentityServer
                         "photostock_fullpermission",
                         "discount_fullpermission",
                         "order_fullpermission",
+                        "cargo_fullpermission",
+                        "payment_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
